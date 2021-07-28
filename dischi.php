@@ -13,31 +13,36 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Php dischi</title>
 </head>
-<body class="bg-secondary">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 bg-warning">
-                <h1>Super negozio mega wow di dischi</h1>
-                <h2 class="mb-3 mt-3 fs-5">Guarda i migliori dischi che abbiamo</h2>
+<body>
+    <section>
+        <div class="container-fluid head">
+            <div class="row">
+                <div class="col-9">
+                    <h1>MusicLine</h1>
+                    <h2 class="mb-3 mt-3 fs-5">Enjoy the music</h2>
+                </div>
+                <div class="col-3 mt-4">
+                    <a href="#"><span>Join Our Shop!!</span></a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <?php for($i = 0; $i<$lunghezza; $i++) { ?>
-                <div class="col-4 d-flex justify-content-between flex-column text-center align-items-center">
-
-                    <img src="<?php echo $dischi[$i]['poster']?>" alt="">
-                    <h2 class="fs-1"> <?php echo $dischi[$i]['title']?> </h2>
-                    <h3 class="fs-5"> <?php echo $dischi[$i]['author']?></h3>
-                    <p> <?php echo $dischi[$i]['year']?></p>
-
-                </div>
-            <?php } ?>
-            
+    
+        <div class="container mt-5">
+            <div class="row">
+                <?php for($i = 0; $i<$lunghezza; $i++) { ?>
+                    <div class="col-4 d-flex justify-content-between flex-column text-center align-items-center">
+    
+                        <img src="<?php echo $dischi[$i]['poster']?>" alt="">
+                        <h2 class="mt-3"> <?php echo $dischi[$i]['title']?> </h2>
+                        <h3> <?php echo $dischi[$i]['author']?></h3>
+                        <p> <?php echo $dischi[$i]['year']?></p>
+    
+                    </div>
+                <?php } ?>
+                
+            </div>
         </div>
-    </div>
+    </section>
 
     
      
